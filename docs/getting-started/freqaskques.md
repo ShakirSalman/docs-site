@@ -34,7 +34,7 @@ Zowe technology can be used by a variety of mainframe IT and non-IT professional
 
 <summary></summary>
 
-Zowe consists of several components. The primary languages are Java and JavaScript. Zowe CLI is written in TypeScript.
+Zowe consists of several components. The primary languages are Java and JavaScript. Zowe CLI and Desktop are written in TypeScript. ZSS is written in C, while the cross memory server is written in metal C.
 
 </details>
 
@@ -97,7 +97,21 @@ To get up and running with the Zowe CLI component quickly, see [Zowe CLI quick s
 
 <summary></summary>
 
-The primary prerequisites is Java on z/OS and the z/OS Management Facility enabled and configured. For a complete list of software requirements listed by component, see [System requirements](../user-guide/systemrequirements.md).
+Prerequisites vary by component used, but in most cases the primary prerequisites are Java and NodeJS on z/OS and the z/OS Management Facility enabled and configured. For a complete list of software requirements listed by component, see [System requirements](../user-guide/systemrequirements.md).
+
+</details>
+
+### What's the difference between using Zowe with or without Docker?
+
+<details class="zowe-faq">
+
+<summary></summary>
+
+There are multiple download options for Zowe server components, such as PAX and SMPE. Docker is another option, which allows you to run some Zowe server components outside of z/OS.
+This may be helpful for those who don't have adequate access to a z/OS machine, or who have extra capacity off-Z that they want to utilize.
+The Docker image contains server components which do not have a hard requirement of running on z/OS: App server, API Mediation Layer, and the USS/MVS/JES Explorers.
+When using the Docker image, z/OS is still required as depending on which components of Zowe you use, you'll still need to set up z/OS Management Facility as well as Zowe's ZSS and Cross memory servers.
+Configuration of the components is similar with or without Docker, but the primary difference is installation & running as with Docker these tasks are all linux-oriented instead of utilizing Jobs and STCs.
 
 </details>
 
