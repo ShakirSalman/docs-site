@@ -107,8 +107,8 @@ Prerequisites vary by component used, but in most cases the primary prerequisite
 
 <summary></summary>
 
-There are multiple download options for Zowe server components, such as PAX and SMPE. Docker is another option, which allows you to run some Zowe server components outside of z/OS.
-This may be helpful for those who don't have adequate access to a z/OS machine, or who have extra capacity off-Z that they want to utilize.
+Docker is a download option for Zowe that allows you to run certain Zowe server components outside of z/OS. It is an alternative to the PAX and SMPE downloads.
+This option is useful for users who do not have adequate access to a z/OS machine, as well as users who have extra capacity off-Z that they want to utilize.
 The Docker image contains server components which do not have a hard requirement of running on z/OS: App server, API Mediation Layer, and the USS/MVS/JES Explorers.
 When using the Docker image, z/OS is still required as depending on which components of Zowe you use, you'll still need to set up z/OS Management Facility as well as Zowe's ZSS and Cross memory servers.
 Configuration of the components is similar with or without Docker, but the primary difference is installation & running as with Docker these tasks are all linux-oriented instead of utilizing Jobs and STCs.
