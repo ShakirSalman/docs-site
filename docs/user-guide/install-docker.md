@@ -1,9 +1,9 @@
-# z/OS Installation Roadmap
+# Docker Installation Roadmap
 
 
-To install Zowe&trade; on z/OS, there are two parts. The first part is the Zowe runtime that consists of four components: Zowe Application Framework, z/OS Explorer Services, Zowe API Mediation Layer, and ZSS. The second part is the Zowe Cross Memory Server. This is an authorized server application that provides privileged services to Zowe in a secure manner.
+To install Zowe&trade; using Docker, there are three parts. The first part is the Zowe z/OS runtime which contains the ZSS component. The second part is the Zowe Cross Memory Server. This is an authorized server application that provides privileged services to Zowe in a secure manner. The third part is the Zowe Docker image, which runs on a Linux host. It consists of three components: Zowe Application Framework, z/OS Explorer Services, and Zowe API Mediation Layer. 
 
-If you want to use Docker, instead follow this related page: [Installing Zowe Server Components using Docker](install-docker.md)
+If you want to install all server components on z/OS instead, instead follow this related page: [Installing Zowe Server Components on z/OS](install-zos.md)
 
 Review the installation diagram and the introduction in this topic to see the general installation sequence and the most important tasks that are to be performed during installation and configuration. You can click each step on the diagram for detailed instructions.
 
@@ -34,6 +34,10 @@ Review the installation diagram and the introduction in this topic to see the ge
   <area href="configure-zowe-zosmf-workflow.html#configure-zowe-certificates" alt="Configure Zowe certificates with z/OSMF workflow" title="Configure Zowe certificates with z/OSMF workflow" shape="rect" coords="515, 832, 754, 882" />
   <area href="configure-zowe-zosmf-workflow.html#create-and-configure-the-zowe-instance-directory-and-start-the-zowe-started-task" alt="Create and configure the Zowe instance directory and start Zowe with z/OSMF workflow" title="Create and configure the Zowe instance directory and start Zowe with z/OSMF workflow" shape="rect" coords="513, 977, 757, 1042" />
 
+<!-- install docker image-->
+<!-- configure docker image-->
+<!-- run docker-->
+
   <area href="verify-zowe-runtime-install.html" alt="Verify Zowe installation on z/OS" title="Verify Zowe installation on z/OS" shape="rect" coords="224, 1154, 616, 1198" />
 </map>
 
@@ -41,7 +45,7 @@ Review the installation diagram and the introduction in this topic to see the ge
 
 Before you start the installation, review the information on hardware and software requirements and other considerations. See [Planning the installation](installandconfig.md) for details.
 
-## Stage 2: Install the Zowe z/OS runtime
+## Stage 2: Install the Zowe runtime on z/OS
 
 1. Ensure that the software requirements are met. The prerequisites are described in [System requirements](systemrequirements.md).
 
@@ -61,7 +65,7 @@ Before you start the installation, review the information on hardware and softwa
 
    While the procedure to obtain and install the convenience build or SMP/E build are different, the procedure to configure a Zowe runtime are the same irrespective of how the build is obtained and installed.
 
-1. Obtain and install the Zowe build.
+1. Obtain and install the Zowe z/OS build.
 
    - For how to obtain the convenience build and install it, see [Installing Zowe runtime from a convenience build](install-zowe-zos-convenience-build.md).
    - For how to obtain the SMP/E build and install it, see [Installing Zowe SMP/E](install-zowe-smpe.md).
@@ -106,7 +110,11 @@ You can configure the Zowe runtime with one of the following methods depending o
 
 5. Configure and start the `ZWESVSTC` started task. For instructions, see [Installing the Zowe started task (ZWESVSTC)](configure-zowe-server.md). 
 
-## Stage 4: Verify the installation
+## Stage 4: Install Docker
+
+...
+
+## Stage 5: Verify the installation
 
 Verify that Zowe is installed correctly on z/OS. See [Verifying Zowe installation on z/OS](verify-zowe-runtime-install.md).
 
